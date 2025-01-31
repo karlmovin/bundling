@@ -18,6 +18,9 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  resolve: {
+    extensions: ["*", ".js", ".jsx"],
+  },
   module: {
     rules: [
       {
@@ -29,7 +32,7 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.(?:js|jsx)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },
